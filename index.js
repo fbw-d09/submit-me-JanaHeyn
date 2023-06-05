@@ -18,15 +18,13 @@ const addUser = async () => {
             email: emailInput.value,
             password: passwordInput.value,
             message: messageInput.value,
-            checkbox: checkboxInput.value,
+            checkbox: checkboxInput.checked,
         })
     });
 
+    console.log(data);
     const dataObject = await data.json();
-    // console.log(JSON.parse(dataObject));
     console.log(dataObject);
-    // console.log(dataObject.id);
-    // console.log(`name: ${dataObject.n}`);
     alert(`Thank you for submitting your details.\nUser ID: ${dataObject.id}`);
 
 }
